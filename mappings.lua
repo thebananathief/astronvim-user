@@ -18,6 +18,20 @@ return {
     --   desc = "Previous buffer",
     -- },
 
+    -- toggleterm just task
+    ["<leader>tj"] = {
+      -- This style was closing after completing, but I wanted to see logs
+      -- function()
+      --   require("astronvim.utils").toggle_term_cmd "just run"
+      -- end,
+      '<cmd>TermExec direction=horizontal cmd="just run" clear_env=false<cr>',
+      desc = "ToggleTerm just run",
+    },
+    ["<leader>tk"] = {
+      '<cmd>TermExec direction=horizontal cmd="just run2" clear_env=false<cr>',
+      desc = "ToggleTerm just run2",
+    },
+
     -- mappings seen under group name "Buffer"
     ["<leader>bD"] = {
       function()
